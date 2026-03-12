@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Smart Travel Planner</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css"/>
+
+</head>
+
+<body>
+
+<h1>✈ Smart Travel Planner</h1>
+
+<div class="container">
+
+<div class="panel">
+
+<h2>📍 Current Location</h2>
+
+<input type="text" id="startLocation" placeholder="Enter your location">
+
+<button onclick="clearStart()">❌ Clear Location</button>
+
+<h2>🏁 Add Destination</h2>
+
+<input type="text" id="destinationInput" placeholder="Enter destination">
+
+<button onclick="addDestination()">➕ Add Destination</button>
+
+<button onclick="clearDestinations()">🧹 Clear Destinations</button>
+
+<h3>Destinations</h3>
+
+<ul id="destinationList"></ul>
+
+<button class="routeBtn" onclick="showRoute()">🚗 Show Route</button>
+
+<button class="resetBtn" onclick="resetTrip()">🔄 Reset Trip</button>
+
+</div>
+
+<div class="mapSection">
+
+<div id="map"></div>
+
+<div class="summaryBox">
+
+<h3>🧭 Journey Summary</h3>
+
+<p id="startInfo">Start: --</p>
+
+<div id="destinationInfo"></div>
+
+<p id="distanceInfo">Total Distance: --</p>
+
+<p id="timeInfo">Total Time: --</p>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
